@@ -14,13 +14,27 @@
     <title>Show Catcher</title>
 </head>
 <body>
-
+<label>    Search Show</label>
+<input type="text" id="show">
+<input type="button" id="button" value="Submit">
 <div class="container mt-3">
     <div class="row">
         <h1 class="col" id="name"></h1>
     </div>
     <div class="row">
-        <table class="table table-striped">
+        <table id='table1' class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Description</th>
+                </tr>
+            </thead>
+            <tbody id="showList">
+            </tbody>
+        </table>
+        
+        <table id="table2" class="table table-striped">
             <thead>
                 <tr>
                     <th scope="col">Season</th>
