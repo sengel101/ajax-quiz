@@ -19,19 +19,23 @@ $(document).ready(
                     //Add the name
                     $('#name').append(data.name);
                     //Add the episodes
-                    data._embedded.shows.forEach(function (show) {
+                    data.forEach(function (show) {
                         $('#showList').append('<tr>'+
-                            '<td>' + episode.id + '</td>' +
-                            '<td>' + episode.title + '</td>' +
-                            '<td>' + episode.description + '</td>' +
+                            '<td>' + show.show.id + '</td>' +
+                            '<td><input type="button" id="btn" value=' + show.show.name  + '></td>' +
+                            '<td>' + show.show.summary + '</td>' +
                             +' </tr>')
+            })
+            $('#btn').click(function(){
+                alert("Correct");
+                var sh = $(this).val;
             })
         })
     }
 )
         
         
-        
+    
       });
         
         
